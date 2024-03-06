@@ -3,7 +3,7 @@ defmodule Ueberauth.Strategy.Discord do
   Discord Strategy for Überauth.
   """
 
-  use Ueberauth.Strategy, uid_field: :id, default_scope: "identify"
+  use Ueberauth.Strategy, uid_field: :id, default_scope: "identify", ignores_csrf_attack: true
 
   alias Ueberauth.Auth.Info
   alias Ueberauth.Auth.Credentials
